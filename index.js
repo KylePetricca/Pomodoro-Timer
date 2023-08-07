@@ -3,6 +3,8 @@ const stopEl = document.getElementById("stop");
 const resetEl = document.getElementById("reset");
 const timerEl = document.getElementById("timer");
 
+const audio = new Audio('audio/Bell Alert.mp3');
+
 let interval;
 let timeLeft = 1500;
 
@@ -22,7 +24,8 @@ function startTimer() {
     updateTimer();
     if (timeLeft === 0) {
       clearInterval(interval);
-      alert("Take a break!");
+      alert('Take a break!');
+      audio.play();
       timeLeft = 1500;
       updateTimer();
     }
