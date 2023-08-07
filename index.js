@@ -46,7 +46,7 @@ startEl.addEventListener("click", startTimer);
 stopEl.addEventListener("click", stopTimer);
 resetEl.addEventListener("click", resetTimer);
 
-const background = document.getElementById("background");
+const background = document.querySelector("body");
 
 const images = [
   "./img/Kyle__Japanese_aesthetic_landscape_realistic_landscape_aestheti_8b1a49d8-cf78-4c93-a832-1ff0dd3d887f.png",
