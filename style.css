@@ -4,6 +4,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
@@ -92,6 +94,39 @@ body:before {
     z-index: -1;
 }
 
+.logo {
+  filter: invert(99%) sepia(6%) saturate(968%) hue-rotate(104deg) brightness(126%) contrast(96%);
+  height: 3rem;
+}
+
+.settings-pop-up {
+  display: flex;
+  position: absolute;
+  background-color: black;
+  max-width: 50rem;
+  color: white;
+  padding: 2rem 3rem;
+  justify-content: space-around;
+  padding-top: 3rem;
+  gap: 4rem;
+  border-radius: 1rem;
+}
+
+.settings-nav li {
+  color: white;
+  border-bottom: 1px dotted hsla(0, 0%, 100%, 0.4);
+  margin-bottom: 0.8rem;
+} 
+
+.theme-settings label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#background-options {
+  width: 100%;
+  padding: 0.5rem;
+}
 
 @media only screen and (max-width: 480px) {
   .timer {
