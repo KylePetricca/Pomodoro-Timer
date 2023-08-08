@@ -35,9 +35,9 @@ function startTimer() {
   }, 1000);
 }
 
-function stopTimer() {
-  clearInterval(interval);
-}
+// function stopTimer() {
+//   clearInterval(interval);
+// }
 
 function resetTimer() {
   clearInterval(interval);
@@ -46,7 +46,7 @@ function resetTimer() {
 }
 
 startEl.addEventListener("click", startTimer);
-stopEl.addEventListener("click", stopTimer);
+// stopEl.addEventListener("click", stopTimer);
 resetEl.addEventListener("click", resetTimer);
 
 // Background functions

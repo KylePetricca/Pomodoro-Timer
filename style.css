@@ -44,6 +44,14 @@ h1 {
   transition: font-size 0.5s ease
 }
 
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 button {
   border-style: none;
   font-size: 1.3rem;
@@ -60,6 +68,18 @@ button {
 
 button:hover {
   background-color: hsla(0, 0%, 100%, 0.4);
+}
+
+.reset-icon {
+  filter: invert(99%) sepia(6%) saturate(968%) hue-rotate(104deg) brightness(126%) contrast(96%);
+  display: inline-block;
+  height: 65px;
+  transition: scale 0.5s ease;
+}
+
+.reset-icon:hover {
+  opacity: 0.8;
+  scale: 93%;
 }
 /* 
 .background-container {
