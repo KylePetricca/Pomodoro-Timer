@@ -1,9 +1,12 @@
+// Variables and DOM Elements
 const startEl = document.getElementById("start");
 const stopEl = document.getElementById("stop");
 const resetEl = document.getElementById("reset");
 const timerEl = document.getElementById("timer");
 
 const audio = new Audio('audio/Bell Alert.mp3');
+
+// Timer Functions
 
 let interval;
 let timeLeft = 1500;
@@ -45,6 +48,8 @@ function resetTimer() {
 startEl.addEventListener("click", startTimer);
 stopEl.addEventListener("click", stopTimer);
 resetEl.addEventListener("click", resetTimer);
+
+// Background functions
 
 const background = document.querySelector("body");
 
