@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./favicon.svg">
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -21,11 +22,37 @@
 
           <button id="start">Start</button>
 
-          <!-- <button id="stop">Stop</button> -->
+          <a id="reset"><img src="./img/exit.svg" alt="Reset icon" class="icon"></a>
 
-          <a id="reset"><img src="./img/exit.svg" alt="Reset a" class="reset-icon"></a>
+          <a id="settings"><img src="./img/settings.svg" alt="Settings icon" class="icon"></a>
 
         </div>
+
+      </section>
+
+      <section class="settings-pop-up">
+
+        <nav class="settings-nav">
+        <ul>
+          <a href="">
+            <li>Theme</li>
+          </a>
+          <a href="">
+            <li>Timer</li>
+          </a>
+        </ul>
+      </nav>
+
+      <div class="theme-settings">
+        <label for="background-options">Select background theme:</label>
+        <select name="background-options" id="background-options">
+          <option value="japanese">Japanese</option>
+          <option value="japanese">Medieval</option>
+          <option value="japanese">Steampunk</option>
+          <option value="japanese">Vintage Anime</option>
+          <option value="japanese">Y2K</option>
+        </select>
+      </div>
 
       </section>
 
