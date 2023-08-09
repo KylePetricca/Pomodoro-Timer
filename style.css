@@ -72,11 +72,14 @@ button:hover {
 }
 
 .icon {
-  filter: invert(99%) sepia(6%) saturate(968%) hue-rotate(104deg) brightness(126%) contrast(96%);
   display: inline-block;
-  height: 65px;
+  height: 45px;
   transition: scale 0.5s ease;
-  margin: 0 5px;
+  margin: 0 10px;
+}
+
+.icon.settings {
+  height: 38px;
 }
 
 .icon:hover {
@@ -94,14 +97,17 @@ body:before {
     z-index: -1;
 }
 
-.logo {
-  filter: invert(99%) sepia(6%) saturate(968%) hue-rotate(104deg) brightness(126%) contrast(96%);
-  height: 3rem;
+.settings-screen {
+  position: absolute;
+  background-color: hsla(0, 0%, 0%, 0.4);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
 }
 
-.settings-pop-up {
+.settings-container {
   display: flex;
-  position: absolute;
   background-color: black;
   max-width: 50rem;
   color: white;
@@ -112,7 +118,14 @@ body:before {
   border-radius: 1rem;
 }
 
-.settings-nav li {
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+  flex-direction: row;
+}
+
+.settings-menu li {
   color: white;
   border-bottom: 1px dotted hsla(0, 0%, 100%, 0.4);
   margin-bottom: 0.8rem;
@@ -132,4 +145,8 @@ body:before {
   .timer {
     font-size: 7rem;
   }
+}
+
+.hidden {
+  display: none;
 }

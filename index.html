@@ -22,16 +22,25 @@
 
           <button id="start">Start</button>
 
-          <a id="reset"><img src="./img/exit.svg" alt="Reset icon" class="icon"></a>
+          <a id="reset"><img src="./img/5@4x.png" alt="Reset icon" class="icon reset"></a>
 
-          <a id="settings"><img src="./img/settings.svg" alt="Settings icon" class="icon"></a>
+          <a id="settings"><img src="./img/14@4x.png" alt="Settings icon" class="icon settings"></a>
 
         </div>
 
       </section>
 
-      <section class="settings-pop-up">
-        <nav class="settings-nav">
+      <div class="settings-screen hidden" id="settings-screen">
+
+        
+      <section class="settings-container">
+
+        <div class="settings-header">
+          <h2>Settings</h2>
+          <a href="#" id="close-btn">X</a>
+        </div>
+
+        <nav class="settings-menu">
         <ul>
           <a href="#">
             <li>Theme</li>
@@ -42,20 +51,21 @@
         </ul>
       </nav>
 
-      <div class="theme-settings">
+      <div class="theme-settings-section">
 
         <label for="background-options">Select background theme:</label>
         <select name="background-options" id="background-options">
           <option value="japanese">Japanese</option>
-          <option value="japanese">Medieval</option>
-          <option value="japanese">Steampunk</option>
-          <option value="japanese">Vintage Anime</option>
-          <option value="japanese">Y2K</option>
+          <option value="medieval">Medieval</option>
+          <option value="steampunk">Steampunk</option>
+          <option value="anime">Vintage Anime</option>
+          <option value="y2k">Y2K</option>
         </select>
 
       </div>
 
       </section>
+    </div>
 
     </main>
 

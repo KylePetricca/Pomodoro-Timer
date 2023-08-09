@@ -1,8 +1,9 @@
 // Variables and DOM Elements
 const startEl = document.getElementById("start");
-const stopEl = document.getElementById("stop");
 const resetEl = document.getElementById("reset");
 const timerEl = document.getElementById("timer");
+const settingsEl = document.getElementById('settings');
+const closeEl = document.getElementById('close-btn');
 
 const audio = new Audio('audio/Bell Alert.mp3');
 
@@ -42,11 +43,17 @@ function resetTimer() {
   updateTimer();
 }
 
+function displayToggle() {
+  const settingsMenu = document.getElementById('settings-screen');
+  settingsMenu.classList.toggle('hidden');
+}
+
 startEl.addEventListener("click", startTimer);
 resetEl.addEventListener("click", resetTimer);
+settingsEl.addEventListener('click', displayToggle);
+closeEl.addEventListener('click', displayToggle);
 
-// Background functions
-
+// Background image functions
 const background = document.querySelector("body");
 
 const images = [
