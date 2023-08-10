@@ -8,6 +8,8 @@
   text-decoration: none;
 }
 
+/* General */
+
 body {
   background-color: #f8f7f2;
   font-family: 'Poppins', sans-serif;
@@ -97,6 +99,8 @@ body:before {
     z-index: -1;
 }
 
+/* Settings Menu */
+
 .settings-screen {
   position: absolute;
   background-color: hsla(0, 0%, 0%, 0.4);
@@ -107,31 +111,46 @@ body:before {
 }
 
 .settings-container {
-  display: flex;
   background-color: black;
   max-width: 50rem;
   color: white;
   padding: 2rem 3rem;
-  justify-content: space-around;
-  padding-top: 3rem;
-  gap: 4rem;
   border-radius: 1rem;
+  margin: 1rem;
 }
 
 .settings-header {
   display: flex;
   justify-content: space-between;
-  align-self: flex-end;
-  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.settings-menu li {
+.settings-body {
+  display: flex;
+  gap: 3rem;
+}
+
+#close-btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  transition: scale 0.5s ease;
+}
+
+#close-btn:hover {
+  opacity: 0.8;
+  scale: 93%;
+}
+
+.settings-nav li {
   color: white;
   border-bottom: 1px dotted hsla(0, 0%, 100%, 0.4);
   margin-bottom: 0.8rem;
+  padding-right: 2rem;
 } 
 
-.theme-settings label {
+.theme-settings-section label {
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -141,12 +160,15 @@ body:before {
   padding: 0.5rem;
 }
 
+/* Media Queries */
+
 @media only screen and (max-width: 480px) {
   .timer {
     font-size: 7rem;
   }
 }
 
+/* Utilities */
 .hidden {
   display: none;
 }

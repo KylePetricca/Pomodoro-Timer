@@ -4,69 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./favicon.svg">
+    <link rel="icon" type="image/x-icon" href="./favicon.svg" />
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- <div class="background-container" id="background">
-    </div> -->
     <main>
+      <!-- Main Page Content -->
       <section class="container">
-
         <h1 class="title">Pomodoro Timer</h1>
 
         <p class="timer" id="timer">25:00</p>
 
         <div class="button-wrapper">
-
           <button id="start">Start</button>
 
-          <a id="reset"><img src="./img/5@4x.png" alt="Reset icon" class="icon reset"></a>
+          <a id="reset"
+            ><img src="./img/5@4x.png" alt="Reset icon" class="icon reset"
+          /></a>
 
-          <a id="settings"><img src="./img/14@4x.png" alt="Settings icon" class="icon settings"></a>
-
+          <a id="settings"
+            ><img
+              src="./img/14@4x.png"
+              alt="Settings icon"
+              class="icon settings"
+          /></a>
         </div>
-
       </section>
 
+      <!-- Settings Menu -->
       <div class="settings-screen hidden" id="settings-screen">
+        <!-- Settings Container -->
+        <section class="settings-container">
+          <!-- Header -->
+          <header class="settings-header">
+            <h2>Settings</h2>
+            <a href="#" id="close-btn">X</a>
+          </header>
 
-        
-      <section class="settings-container">
+          <!-- Navbar -->
+          <div class="settings-body">
+            <nav class="settings-nav">
+              <ul>
+                <a href="#">
+                  <li>Theme</li>
+                </a>
+                <a href="#">
+                  <li>Timer</li>
+                </a>
+              </ul>
+            </nav>
 
-        <div class="settings-header">
-          <h2>Settings</h2>
-          <a href="#" id="close-btn">X</a>
-        </div>
+            <!-- Settings Content -->
 
-        <nav class="settings-menu">
-        <ul>
-          <a href="#">
-            <li>Theme</li>
-          </a>
-          <a href="#">
-            <li>Timer</li>
-          </a>
-        </ul>
-      </nav>
-
-      <div class="theme-settings-section">
-
-        <label for="background-options">Select background theme:</label>
-        <select name="background-options" id="background-options">
-          <option value="japanese">Japanese</option>
-          <option value="medieval">Medieval</option>
-          <option value="steampunk">Steampunk</option>
-          <option value="anime">Vintage Anime</option>
-          <option value="y2k">Y2K</option>
-        </select>
-
+            <div class="theme-settings-section">
+              <label for="background-options">Select background theme:</label>
+              <select name="background-options" id="background-options">
+                <option value="japanese">Japanese</option>
+                <option value="medieval">Medieval</option>
+                <option value="steampunk">Steampunk</option>
+                <option value="anime">Vintage Anime</option>
+                <option value="y2k">Y2K</option>
+              </select>
+            </div>
+          </div>
+        </section>
       </div>
-
-      </section>
-    </div>
-
     </main>
 
     <script src="./index.js"></script>
