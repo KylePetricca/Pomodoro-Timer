@@ -155,9 +155,10 @@ body:before {
   margin-bottom: 0.5rem;
 }
 
-#background-options {
+select {
   width: 100%;
   padding: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Media Queries */
