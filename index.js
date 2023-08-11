@@ -2,10 +2,10 @@
 const startEl = document.getElementById("start");
 const resetEl = document.getElementById("reset");
 const timerEl = document.getElementById("timer");
-const settingsEl = document.getElementById('settings');
-const closeEl = document.getElementById('close-btn');
+const settingsEl = document.getElementById("settings");
+const closeEl = document.getElementById("close-btn");
 
-const audio = new Audio('audio/Bell Alert.mp3');
+const audio = new Audio("audio/Bell Alert.mp3");
 
 // Timer Functions
 
@@ -18,7 +18,7 @@ function updateTimer() {
   let formattedTimer = `${minutes.toString().padStart(2, "0")}:${seconds
     .toString()
     .padStart(2, "0")}`;
-
+  document.title = `${formattedTimer} | Pomodoro Timer`;
   timerEl.innerHTML = formattedTimer;
 }
 
@@ -28,14 +28,13 @@ function startTimer() {
     updateTimer();
     if (timeLeft === 0) {
       clearInterval(interval);
-      alert('Take a break!');
+      alert("Take a break!");
       audio.play();
       timeLeft = 1500;
       updateTimer();
     }
   }, 1000);
 }
-
 
 function resetTimer() {
   clearInterval(interval);
@@ -44,14 +43,9 @@ function resetTimer() {
 }
 
 function displayToggle() {
-  const settingsMenu = document.getElementById('settings-screen');
-  settingsMenu.classList.toggle('hidden');
+  const settingsMenu = document.getElementById("settings-screen");
+  settingsMenu.classList.toggle("hidden");
 }
-
-startEl.addEventListener("click", startTimer);
-resetEl.addEventListener("click", resetTimer);
-settingsEl.addEventListener('click', displayToggle);
-closeEl.addEventListener('click', displayToggle);
 
 // Background image functions
 const background = document.querySelector("body");
@@ -75,3 +69,9 @@ function changePicture() {
   if (i > images.length - 1) i = 0;
   background.style.backgroundImage = `url(${images[i]})`;
 }
+
+// Event Listeners
+startEl.addEventListener("click", startTimer);
+resetEl.addEventListener("click", resetTimer);
+settingsEl.addEventListener("click", displayToggle);
+closeEl.addEventListener("click", displayToggle);
