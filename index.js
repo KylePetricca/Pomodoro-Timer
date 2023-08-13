@@ -48,8 +48,6 @@ function displayToggle() {
 }
 
 // Background image functions
-const background = document.querySelector("body");
-
 const images = [
   "./img/Kyle__Japanese_aesthetic_landscape_realistic_landscape_aestheti_8b1a49d8-cf78-4c93-a832-1ff0dd3d887f.png",
   "./img/Kyle__Japanese_aesthetic_landscape_realistic_landscape_aestheti_c736430f-dafb-4988-96ad-00eae60f576a.png",
@@ -65,10 +63,18 @@ window.setInterval(changePicture, 10000);
 
 let i = 0;
 function changePicture() {
+  const background = document.querySelector("body");
   i++;
   if (i > images.length - 1) i = 0;
   background.style.backgroundImage = `url(${images[i]})`;
 }
+
+// Colour theme functions
+function changeColours() {
+  const colourSelect = document.getElementById('colour-options');
+  
+}
+
 
 // Event Listeners
 startEl.addEventListener("click", startTimer);
