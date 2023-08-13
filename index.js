@@ -71,8 +71,31 @@ function changePicture() {
 
 // Colour theme functions
 function changeColours() {
-  const colourSelect = document.getElementById('colour-options');
-  
+  const colourOptions = document.getElementById('colour-options').value;
+  switch (colourOptions) {
+    case 'black':
+      document.documentElement.style.setProperty('--main-colour', '359, 100%, 0%');
+      break;
+    case 'white':
+      document.documentElement.style.setProperty('--main-colour', '0, 0%, 100%');
+      document.documentElement.style.setProperty('--second-colour', '359, 100%, 0%');
+      break;
+    case 'coral':
+      document.documentElement.style.setProperty('--main-colour', '209, 14%, 38%');
+      break;
+    case 'purple':
+      document.documentElement.style.setProperty('--main-colour', '251, 24%, 55%');
+      break;
+    case 'pink':
+      document.documentElement.style.setProperty('--main-colour', '353, 46%, 72%');
+      break;
+    case 'tumble':
+      document.documentElement.style.setProperty('--main-colour', '42, 34%, 71%');
+      break;
+    default:
+      document.documentElement.style.setProperty('--main-colour', '359, 100%, 0%');
+      break;
+  }
 }
 
 

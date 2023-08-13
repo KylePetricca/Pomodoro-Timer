@@ -8,6 +8,12 @@
   text-decoration: none;
 }
 
+/* Root */
+:root {
+  --main-colour: 359, 100%, 0%;
+  --second-colour: 0, 0%, 100%;
+}
+
 /* General */
 
 body {
@@ -111,9 +117,9 @@ body:before {
 }
 
 .settings-container {
-  background-color: black;
+  background-color: hsla(var(--main-colour), 0.97);
   max-width: 50rem;
-  color: white;
+  color: hsl(var(--second-colour));
   padding: 2rem 3rem;
   border-radius: 1rem;
   margin: 1rem;
