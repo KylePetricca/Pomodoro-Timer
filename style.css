@@ -140,7 +140,7 @@ body:before {
 #close-btn {
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
+  color: hsl(var(--second-colour));
   transition: scale 0.5s ease;
 }
 
@@ -150,8 +150,8 @@ body:before {
 }
 
 .settings-nav li {
-  color: white;
-  border-bottom: 1px dotted hsla(0, 0%, 100%, 0.4);
+  color: hsl(var(--second-colour));
+  border-bottom: 1px dotted hsla(var(--second-colour), 0.4);
   margin-bottom: 0.8rem;
   padding-right: 2rem;
 } 

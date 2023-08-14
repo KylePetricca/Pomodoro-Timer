@@ -5,7 +5,7 @@ const timerEl = document.getElementById("timer");
 const settingsEl = document.getElementById("settings");
 const closeEl = document.getElementById("close-btn");
 
-const audio = new Audio("audio/Bell Alert.mp3");
+let audio = new Audio("audio/Bell Alert.mp3");
 
 // Timer Functions
 
@@ -28,7 +28,7 @@ function startTimer() {
     updateTimer();
     if (timeLeft === 0) {
       clearInterval(interval);
-      alert("Take a break!");
+      // alert("Take a break!");
       audio.play();
       timeLeft = 1500;
       updateTimer();
@@ -48,7 +48,7 @@ function displayToggle() {
 }
 
 // Background image functions
-const images = [
+let images = [
   "./img/Kyle__Japanese_aesthetic_landscape_realistic_landscape_aestheti_8b1a49d8-cf78-4c93-a832-1ff0dd3d887f.png",
   "./img/Kyle__Japanese_aesthetic_landscape_realistic_landscape_aestheti_c736430f-dafb-4988-96ad-00eae60f576a.png",
   "./img/Kyle__Japanese_cherry_blossom_landscape_realistic_landscape_7518f270-3c38-4384-903d-068bbc4ab013.png",
@@ -71,33 +71,106 @@ function changePicture() {
 
 // Colour theme functions
 function changeColours() {
-  const colourOptions = document.getElementById('colour-options').value;
+  const colourOptions = document.getElementById("colour-options").value;
   switch (colourOptions) {
-    case 'black':
-      document.documentElement.style.setProperty('--main-colour', '359, 100%, 0%');
+    case "black":
+      document.documentElement.style.setProperty(
+        "--main-colour",
+        "359, 100%, 0%"
+      );
+      document.documentElement.style.setProperty(
+        "--second-colour",
+        "0, 0%, 100%"
+      );
       break;
-    case 'white':
-      document.documentElement.style.setProperty('--main-colour', '0, 0%, 100%');
-      document.documentElement.style.setProperty('--second-colour', '359, 100%, 0%');
+    case "white":
+      document.documentElement.style.setProperty(
+        "--main-colour",
+        "0, 0%, 100%"
+      );
+      document.documentElement.style.setProperty(
+        "--second-colour",
+        "359, 100%, 0%"
+      );
       break;
-    case 'coral':
-      document.documentElement.style.setProperty('--main-colour', '209, 14%, 38%');
+    case "coral":
+      document.documentElement.style.setProperty(
+        "--main-colour",
+        "209, 14%, 38%"
+      );
+      document.documentElement.style.setProperty(
+        "--second-colour",
+        "0, 0%, 100%"
+      );
       break;
-    case 'purple':
-      document.documentElement.style.setProperty('--main-colour', '251, 24%, 55%');
+    case "purple":
+      document.documentElement.style.setProperty(
+        "--main-colour",
+        "251, 24%, 55%"
+      );
+      document.documentElement.style.setProperty(
+        "--second-colour",
+        "0, 0%, 100%"
+      );
       break;
-    case 'pink':
-      document.documentElement.style.setProperty('--main-colour', '353, 46%, 72%');
+    case "pink":
+      document.documentElement.style.setProperty(
+        "--main-colour",
+        "353, 46%, 72%"
+      );
+      document.documentElement.style.setProperty(
+        "--second-colour",
+        "0, 0%, 100%"
+      );
       break;
-    case 'tumble':
-      document.documentElement.style.setProperty('--main-colour', '42, 34%, 71%');
+    case "tumble":
+      document.documentElement.style.setProperty(
+        "--main-colour",
+        "42, 34%, 71%"
+      );
+      document.documentElement.style.setProperty(
+        "--second-colour",
+        "0, 0%, 100%"
+      );
       break;
     default:
-      document.documentElement.style.setProperty('--main-colour', '359, 100%, 0%');
+      document.documentElement.style.setProperty(
+        "--main-colour",
+        "359, 100%, 0%"
+      );
+      document.documentElement.style.setProperty(
+        "--second-colour",
+        "0, 0%, 100%"
+      );
       break;
   }
 }
 
+function changeSound() {
+  const soundOptions = document.getElementById("sound-options").value;
+  switch (soundOptions) {
+    case "bell":
+      audio = new Audio("audio/Bell Alert.mp3");
+      audio.play();
+      break;
+    case "samurai":
+      audio = new Audio("audio/10787 samurai message ding.wav");
+      audio.play();
+      break;
+    case "medieval":
+      audio = new Audio("audio/Medieval Alert.mp3");
+      audio.play();
+      break;
+    case "fanfare":
+      audio = new Audio("audio/Win Fanfare.mp3");
+      audio.play();
+      break;
+    default:
+      audio = new Audio("audio/Bell Alert.mp3");
+      audio.play();
+      break;
+  }
+}
 
 // Event Listeners
 startEl.addEventListener("click", startTimer);
