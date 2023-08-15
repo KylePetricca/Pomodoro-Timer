@@ -219,6 +219,15 @@ function changeSound() {
   }
 }
 
+// Spotify
+function showSpotify(checkbox) {
+  if (checkbox === true) {
+    document.getElementById('spotify').classList.add('hidden');
+  } else {
+    document.getElementById('spotify').classList.remove('hidden');
+  };
+};
+
 // Event Listeners
 startEl.addEventListener("click", startTimer);
 resetEl.addEventListener("click", resetTimer);

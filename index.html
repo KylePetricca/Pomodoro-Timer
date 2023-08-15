@@ -35,7 +35,7 @@
       </section>
 
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6luwmsHheTsLRh1rc51QLi?utm_source=generator&theme=0" height="122" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="spotify
-      "></iframe>
+      " id="spotify"></iframe>
 
       <!-- Settings Menu -->
       <div class="settings-screen hidden" id="settings-screen">
@@ -88,6 +88,9 @@
                 <option value="pink">Parrot Pink</option>
                 <option value="tumble">Tumbleweed</option>
               </select>
+
+              <label for="spotify">Show Spotify playlist?:</label> 
+              <Input type="checkbox" name="spotify" id="spotify" onchange="showSpotify(this)"></Input>
             </div>
           </div>
         </section>
