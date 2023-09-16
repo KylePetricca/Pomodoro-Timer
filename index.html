@@ -34,9 +34,6 @@
         </div>
       </section>
 
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6luwmsHheTsLRh1rc51QLi?utm_source=generator&theme=0" height="122" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="spotify
-      " id="spotify"></iframe>
-
       <!-- Settings Menu -->
       <div class="settings-screen hidden" id="settings-screen">
         <!-- Settings Container -->
@@ -51,10 +48,10 @@
           <div class="settings-body">
             <nav class="settings-nav">
               <ul>
-                <a href="#">
+                <a class="tabs" onclick="changeTab(event, 'Theme')" id="defaultOpen">
                   <li>Theme</li>
                 </a>
-                <a href="#">
+                <a class="tabs" onclick="changeTab(event, 'Timer')">
                   <li>Timer</li>
                 </a>
               </ul>
@@ -62,7 +59,7 @@
 
             <!-- Settings Content -->
 
-            <div class="theme-settings-section">
+            <div class="theme-settings-section tab-content" id="Theme">
               <label for="background-options">Select background theme:</label>
               <select name="background-options" id="background-options" onchange="changeBackgrounds()">
                 <option value="japanese">Japanese</option>
@@ -88,9 +85,11 @@
                 <option value="pink">Parrot Pink</option>
                 <option value="tumble">Tumbleweed</option>
               </select>
+            </div>
 
-              <label for="spotify">Show Spotify playlist?:</label> 
-              <Input type="checkbox" name="spotify" id="spotify" onchange="showSpotify(this)"></Input>
+            <div class="theme-settings-section tab-content" id="Timer">
+              <label for="timer-length">Set your timer length:</label>
+              <input type="range" name="timer-length" id="timer-length" min="10" max="50">
             </div>
           </div>
         </section>

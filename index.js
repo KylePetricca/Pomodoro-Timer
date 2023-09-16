@@ -4,6 +4,7 @@ const resetEl = document.getElementById("reset");
 const timerEl = document.getElementById("timer");
 const settingsEl = document.getElementById("settings");
 const closeEl = document.getElementById("close-btn");
+const tabEl = document.getElementById('settings-nav');
 
 let audio = new Audio("audio/Bell Alert.mp3");
 
@@ -219,14 +220,25 @@ function changeSound() {
   }
 }
 
-// Spotify
-function showSpotify(checkbox) {
-  if (checkbox === true) {
-    document.getElementById('spotify').classList.add('hidden');
-  } else {
-    document.getElementById('spotify').classList.remove('hidden');
+// Settings menu tab change
+function changeTab(e, tabName) {
+  let i, tabcontent, tabs;
+
+  tabcontent = document.getElementsByClassName('tab-content');
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = 'none';
   };
+
+  tabs = document.getElementsByClassName('tabs');
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].className = tabs[i].className.replace('active', '');
+  };
+
+  document.getElementById(tabName).style.display = 'block';
+  e.currentTarget.className += 'active';
 };
+
+document.getElementById('defaultOpen').click()
 
 // Event Listeners
 startEl.addEventListener("click", startTimer);

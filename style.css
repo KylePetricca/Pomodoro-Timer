@@ -105,12 +105,6 @@ body:before {
     z-index: -1;
 }
 
-/* Spotify */
-.spotify {
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-}
 
 /* Settings Menu */
 
@@ -163,6 +157,16 @@ body:before {
   padding-right: 2rem;
 } 
 
+.settings-nav li:hover {
+  color: blue;
+}
+
+.settings-nav ul::after {
+  content: "";
+  background-color: aqua;
+  background-size: cover;
+}
+
 .theme-settings-section label {
   display: block;
   margin-bottom: 0.5rem;
@@ -174,15 +178,20 @@ select {
   margin-bottom: 1.5rem;
 }
 
+.tab-content {
+  animation: fadeEffect 1s; 
+}
+
+@keyframes fadeEffect{
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
 /* Media Queries */
 
 @media only screen and (max-width: 480px) {
   .timer {
     font-size: 7rem;
-  }
-
-  .spotify {
-    display: none;
   }
 }
 
